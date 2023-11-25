@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Plotly.js -->
+	<script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
+</head>
+<body>
+    <div class="nav-bar">
+        <button id="logo">DolARG</button>
+        <div class="right-menu">
+            <div class="button" id="changeStateBtn">
+                <i class="bi bi-circle-half"></i>
+            </div>
+            <div class="date-container">
+            </div>
+        </div>
+    </div>
+
+    <div class="container main">
+        <h2>DolARG</h2>
+        <p>Consulta la cotizacion del dolar oficial y blue!</p>
+        <button class="request-btn">Consulta</button>
+    </div>
+
+    <div class="data-container container">
+
+        <div class="form-container col-8" id="form">
+            <div class="input">
+                <label for="monto">Ingrese el monto que desea convertir! <br> (pesos o dolares)</label>
+                <input type="number" id="monto" disabled>
+            </div>
+
+            <div class="results">
+                <div class="from-pesos">
+                    <div>
+                        <span>ARS </span>
+                        <span id="ars-input"></span>
+                    </div>
+                    <i class="bi bi-arrow-right"></i>
+                    <div>
+                        <span>USD </span>
+                        <span id="usd-result"></span>
+                    </div>
+                </div>
+                <div class="from-dolars">
+                    <div>
+                        <span>USD </span>
+                        <span id="usd-input"></span>
+                    </div>
+                    <i class="bi bi-arrow-right"></i>
+                    <div>
+                        <span>ARS</span>
+                        <span id="ars-result"></span>
+                    </div>
+                </div>
+                
+            </div>        
+        </div>
+
+        <div class="table-container">
+            <table class="table">
+                <thead class="table-head">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Compra</th>
+                        <th>Venta</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container" id="plotDiv">
+        </div>
+    </div>
+
+
+    <div class="container info">
+        <p>Esta informacion fue obtenida de la API <a href="https://dolarapi.com/docs/" target="_blank">DolarApi</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
