@@ -140,7 +140,7 @@ const checkTime = () => {
     // Date
     var date = new Date(Date.now());
 
-    var dateStr = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+    var dateStr = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
 
     // Time
     var format = "AM";
